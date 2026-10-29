@@ -1,0 +1,399 @@
+{
+  "summary": {
+    "model": "gpt-5.4-mini",
+    "embedding_model": "text-embedding-3-small",
+    "hybrid": true,
+    "cases": 32,
+    "retrieval": {
+      "dense": {
+        "doc_hit@1": 79.2,
+        "doc_hit@k": 100.0,
+        "fact_recall@k": 95.8,
+        "passes_gate": 100.0
+      },
+      "rerank": {
+        "doc_hit@1": 79.2,
+        "doc_hit@k": 100.0,
+        "fact_recall@k": 95.8,
+        "passes_gate": 100.0
+      },
+      "hybrid": {
+        "doc_hit@1": 79.2,
+        "doc_hit@k": 100.0,
+        "fact_recall@k": 95.8,
+        "passes_gate": 100.0
+      }
+    },
+    "answer_accuracy": 95.8,
+    "citation_accuracy": 100.0,
+    "unanswerable_declined": 100.0,
+    "latency_ms_p50": 1376,
+    "latency_ms_p95": 1707
+  },
+  "cases": [
+    {
+      "id": "hotline-number",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Позвоните на горячую линию Arch Tech по номеру **8-800-700-18-44**. Звонок по России бесплатный."
+    },
+    {
+      "id": "hotline-weekend",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "В субботу горячая линия Arch Tech работает с 10:00 до 18:00 по московскому времени."
+    },
+    {
+      "id": "delivery-moscow",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "По Москве доставка обычно занимает 1–2 рабочих дня. Также у нас доступна экспресс-доставка в день заказа, если заказ оформлен до 14:00 по местному времени и товар есть на складе."
+    },
+    {
+      "id": "delivery-remote-en",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt",
+        "hr_handbook.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base says delivery to remote settlements can take up to 10 business days after the order is confirmed by an operator."
+    },
+    {
+      "id": "free-courier",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Курьерская доставка бесплатна для заказов от 20 000 рублей."
+    },
+    {
+      "id": "free-pickup",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "Delivery to a pickup point is free for orders from 10,000 rubles."
+    },
+    {
+      "id": "express",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "Экспресс-доставка в день заказа доступна в Москве, если заказ оформлен до 14:00 по местному времени и товар есть на складе."
+    },
+    {
+      "id": "tracking",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Если трек-номер не пришёл в течение 24 часов после передачи заказа в службу доставки, нужно обратиться в поддержку Arch Tech."
+    },
+    {
+      "id": "payment-sbp",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Да, можно. Arch Tech принимает оплату через СБП, а также банковскими картами МИР, Visa и Mastercard, по счету для юридических лиц и наличными или картой курьеру в городах, где доступна постоплата."
+    },
+    {
+      "id": "invoice-validity",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Для юридических лиц счёт действует **3 рабочих дня**.  \nТакже резерв товара для юридического лица сохраняется **на 2 рабочих дня после выставления счёта**."
+    },
+    {
+      "id": "invoice-reserve",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt",
+        "hr_handbook.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base confirms that for legal entities, the stock reservation is kept for **2 business days after the invoice is issued**."
+    },
+    {
+      "id": "warranty-standard",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "На большинство устройств действует гарантия 12 месяцев. Для отдельных товаров Arch Tech Pro может действовать расширенная гарантия 24 месяца, если это указано в карточке товара и документах заказа.\n\nГарантия покрывает:\n- заводской брак;\n- отказ устройства при нормальной эксплуатации;\n- неисправность блока питания или комплектного кабеля;\n- проблемы с прошивкой, если они не вызваны неофициальным ПО.\n\nЕсли хотите, мы также можем кратко перечислить, что гарантия не покрывает."
+    },
+    {
+      "id": "warranty-pro",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "Yes — our Arch Tech knowledge base says some Arch Tech Pro products have an extended 24-month warranty, if this is stated in the product card and the order documents.\n\nFor most other devices, the warranty is 12 months."
+    },
+    {
+      "id": "warranty-excluded",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Наш Arch Tech knowledge base не содержит точного подтверждения для случая, когда устройство упало и разбилось. Известно, что гарантия не покрывает механические повреждения после покупки, а также следы падения. Если дефект подтвержден сервисным центром, мы можем предложить ремонт, замену устройства на новое или возврат денег — решение зависит от модели, наличия товара на складе и заключения сервисного центра."
+    },
+    {
+      "id": "diagnostics",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Обычно диагностика занимает 3–7 рабочих дней после получения товара сервисным центром. В сложных случаях она может занять до 14 рабочих дней."
+    },
+    {
+      "id": "return-window",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "Товар надлежащего качества можно вернуть в течение 14 дней после получения, если сохранены упаковка, товарный вид, пломбы, комплектность и документы."
+    },
+    {
+      "id": "refund-time",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base says refunds are usually processed within **3–10 business days after the return is approved**. The refund is sent back using the **same payment method** used for the purchase."
+    },
+    {
+      "id": "home-start",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "В набор **Arch Home Start** входят: **хаб умного дома, две умные розетки, датчик движения и датчик протечки**."
+    },
+    {
+      "id": "wifi-max",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Arch Wi-Fi Max — это mesh-система из двух модулей для квартиры до 120 м²."
+    },
+    {
+      "id": "camera-wifi",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Если камера не подключается к Wi‑Fi, мы рекомендуем проверить частоту сети **2.4 ГГц**, затем **сбросить устройство по инструкции** и **написать в чат поддержки**.\n\nЕсли хотите, мы также можем подсказать, что подготовить для обращения в поддержку."
+    },
+    {
+      "id": "socket-hot",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Если умная розетка щёлкает или греется, немедленно отключите её от сети и обратитесь на горячую линию."
+    },
+    {
+      "id": "telegram-support",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Yes — we have Telegram support: **@archtech_support_bot**."
+    },
+    {
+      "id": "support-email",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": false,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base does not have exact confirmation yet for a support email address. It does confirm that customers can contact support by hot line, chat, or email, but the email address itself is not listed in the Arch Tech knowledge base provided."
+    },
+    {
+      "id": "no-subscriptions",
+      "unanswerable": false,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": true,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt"
+      ],
+      "answer": "Нет, Arch Tech не продаёт цифровые подписки как основной продукт. Наш основной ассортимент — физические устройства для дома, офиса и малого бизнеса: например, умные колонки, Wi‑Fi роутеры, mesh-системы, IP-камеры, видеодомофоны, датчики умного дома, умные розетки, док-станции, зарядные станции, мини-ПК, мониторы, клавиатуры и наушники."
+    },
+    {
+      "id": "oos-price",
+      "unanswerable": true,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Наш Arch Tech knowledge base не содержит точной цены на набор **Arch Wi‑Fi Max**. Известно, что это **mesh-система из двух модулей для квартиры до 120 м²**. Если хотите, мы можем помочь подобрать похожее решение под вашу площадь и сценарий использования."
+    },
+    {
+      "id": "oos-installments",
+      "unanswerable": true,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Наше Arch Tech knowledge base не содержит точного подтверждения по рассрочке для мини-ПК. Известно, что мы принимаем оплату банковскими картами МИР, Visa и Mastercard, через СБП, по счету для юридических лиц, а также наличными или картой курьеру в городах, где доступна постоплата."
+    },
+    {
+      "id": "oos-showroom-address",
+      "unanswerable": true,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base does not have exact confirmation yet about the Moscow showroom’s street address. We do know that self-pickup is available from the Arch Tech showroom in Moscow by предварительный резерв, but the exact address is not listed."
+    },
+    {
+      "id": "oos-ceo",
+      "unanswerable": true,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base does not have exact confirmation yet about who the CEO is. We can confirm that Arch Tech is a Russian online store for physical technology products for home, office, and small business, but the leadership details are not listed in the knowledge base."
+    },
+    {
+      "id": "oos-student-discount",
+      "unanswerable": true,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [
+        "arch_tech_knowledge_base.txt",
+        "company_policy.txt",
+        "hr_handbook.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base does not have exact confirmation yet about a student discount. We do have information about payment methods, delivery, and business documents, but no confirmed student pricing or discount program is listed."
+    },
+    {
+      "id": "oos-iphone",
+      "unanswerable": true,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base does not have exact confirmation yet about the iPhone 17 Pro. We do know that Arch Tech sells physical technology devices for home, office, and small business, including smart home products, networking equipment, cameras, and docking stations."
+    },
+    {
+      "id": "oos-weather",
+      "unanswerable": true,
+      "status": "insufficient_context",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [],
+      "answer": "Our Arch Tech knowledge base does not have enough precise information to answer this question yet. We can help with what is already covered in the knowledge base: product categories, delivery, payments, returns, warranty, and support requests."
+    },
+    {
+      "id": "oos-trade-in",
+      "unanswerable": true,
+      "status": "answered",
+      "ok": true,
+      "cited_expected_source": null,
+      "citations": [
+        "arch_tech_knowledge_base.txt"
+      ],
+      "answer": "Our Arch Tech knowledge base does not have exact confirmation yet about trade-in for old routers.\n\nWhat we do know is that we sell Wi‑Fi routers and can help with device selection, and our support can assist with diagnostics, exchange, repair, or return in the cases described in the knowledge base. If you’d like, we can help with router selection or with a return/exchange question for an existing order."
+    }
+  ]
+}

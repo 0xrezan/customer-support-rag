@@ -1,0 +1,60 @@
+@theme {
+  --color-background: #fafbfc;
+  --color-foreground: #0f1117;
+  --color-muted: #f0f1f3;
+  --color-muted-foreground: #6b7280;
+  --color-border: #e2e4e8;
+  --color-input: #e2e4e8;
+  --color-ring: #10b981;
+  --color-primary: #0d7a5f;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #f0f1f3;
+  --color-secondary-foreground: #0f1117;
+  --color-accent: #ede9fe;
+  --color-accent-foreground: #4c1d95;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+  --color-card: #ffffff;
+  --color-card-foreground: #0f1117;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0f1117;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-emerald-start: #065f46;
+  --color-emerald-end: #6ee7b7;
+  --color-brand-start: #7c3aed;
+  --color-brand-end: #c084fc;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+/* ── Dark mode overrides ─────────────────────────────────── */
+.dark {
+  --color-background: #08090c;
+  --color-foreground: #f0f1f3;
+  --color-muted: #1a1d24;
+  --color-muted-foreground: #9ca3af;
+  --color-border: #1e2028;
+  --color-input: #1e2028;
+  --color-ring: #10b981;
+  --color-primary: #10b981;
+  --color-primary-foreground: #022c22;
+  --color-secondary: #1a1d24;
+  --color-secondary-foreground: #f0f1f3;
+  --color-accent: #1e1338;
+  --color-accent-foreground: #c084fc;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #fafafa;
+  --color-card: #0d0f14;
+  --color-card-foreground: #f0f1f3;
+  --color-popover: #0d0f14;
+  --color-popover-foreground: #f0f1f3;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-emerald-start: #065f46;
+  --color-emerald-end: #6ee7b7;
+  --color-brand-start: #a78bfa;
+  --color-brand-end: #e9d5ff;
+}

@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test / coverage
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Alembic
+migrations/versions/*.pyc
+
+# Uploads (user-submitted documents)
+uploads/
+
+# Ruff cache
+.ruff_cache/
+
+# Chroma local data
+chroma_data/
+
+# Frontend artifacts
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/

@@ -1,0 +1,48 @@
+# Version control
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+.mypy_cache
+.ruff_cache
+.pytest_cache
+
+# Environment and secrets
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Docker
+docker-compose*.yml
+Dockerfile
+
+# Tests and docs
+tests/
+docs/
+*.md
+fixes.txt
+
+# Data volumes
+chroma_data/
+pg_data/
+uploads/
+
+# Frontend (not part of backend image)
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+
+# OS files
+.DS_Store
+Thumbs.db

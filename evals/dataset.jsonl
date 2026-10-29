@@ -1,0 +1,32 @@
+{"id": "hotline-number", "question": "По какому номеру звонить на горячую линию?", "source": "arch_tech_knowledge_base.txt", "expect": [["8-800-700-18-44", "8 800 700 18 44", "8 (800) 700-18-44"]]}
+{"id": "hotline-weekend", "question": "До скольки работает горячая линия в субботу?", "source": "arch_tech_knowledge_base.txt", "expect": [["18:00"]]}
+{"id": "delivery-moscow", "question": "Сколько идёт доставка по Москве?", "source": "arch_tech_knowledge_base.txt", "expect": [["1-2", "1–2", "1 до 2", "одного до двух"]]}
+{"id": "delivery-remote-en", "question": "How long does delivery take to remote settlements?", "source": "arch_tech_knowledge_base.txt", "expect": [["10"]]}
+{"id": "free-courier", "question": "С какой суммы заказа курьерская доставка бесплатная?", "source": "arch_tech_knowledge_base.txt", "expect": [["20 000", "20000", "20,000", "20 000"]]}
+{"id": "free-pickup", "question": "When is delivery to a pickup point free?", "source": "arch_tech_knowledge_base.txt", "expect": [["10 000", "10000", "10,000", "10 000"]]}
+{"id": "express", "question": "До какого времени нужно оформить заказ, чтобы получить экспресс-доставку в тот же день?", "source": "arch_tech_knowledge_base.txt", "expect": [["14:00"]]}
+{"id": "tracking", "question": "Трек-номер так и не пришёл, через сколько часов писать в поддержку?", "source": "arch_tech_knowledge_base.txt", "expect": [["24"]]}
+{"id": "payment-sbp", "question": "Можно ли оплатить заказ через СБП?", "source": "arch_tech_knowledge_base.txt", "expect": [["СБП", "SBP", "Faster Payment"]]}
+{"id": "invoice-validity", "question": "Сколько действует счёт для юридического лица?", "source": "arch_tech_knowledge_base.txt", "expect": [["3 рабоч", "три рабоч", "3 business", "three business", "3 working"]]}
+{"id": "invoice-reserve", "question": "How long is stock reserved for a company after the invoice is issued?", "source": "arch_tech_knowledge_base.txt", "expect": [["2 business", "two business", "2 working", "two working", "2 рабоч"]]}
+{"id": "warranty-standard", "question": "Какая гарантия на устройства?", "source": "arch_tech_knowledge_base.txt", "expect": [["12"]]}
+{"id": "warranty-pro", "question": "Is there an extended warranty for Arch Tech Pro products?", "source": "arch_tech_knowledge_base.txt", "expect": [["24"]]}
+{"id": "warranty-excluded", "question": "Покрывает ли гарантия устройство, которое упало и разбилось?", "source": "arch_tech_knowledge_base.txt", "expect": [["не покрыва", "не распространя", "не входит", "не является гарантийн", "does not cover", "not covered"]]}
+{"id": "diagnostics", "question": "Сколько обычно занимает диагностика в сервисном центре?", "source": "arch_tech_knowledge_base.txt", "expect": [["3-7", "3–7", "3 до 7"]]}
+{"id": "return-window", "question": "Сколько дней есть на возврат товара надлежащего качества?", "source": "arch_tech_knowledge_base.txt", "expect": [["14"]]}
+{"id": "refund-time", "question": "How long does a refund take after the return is approved?", "source": "arch_tech_knowledge_base.txt", "expect": [["3-10", "3–10", "3 to 10"]]}
+{"id": "home-start", "question": "Что входит в набор Arch Home Start?", "source": "arch_tech_knowledge_base.txt", "expect": [["протечк", "leak"], ["розетк", "plug"]]}
+{"id": "wifi-max", "question": "Для квартиры какой площади подходит Arch Wi-Fi Max?", "source": "arch_tech_knowledge_base.txt", "expect": [["120"]]}
+{"id": "camera-wifi", "question": "Камера не подключается к Wi-Fi, что проверить?", "source": "arch_tech_knowledge_base.txt", "expect": [["2.4", "2,4"]]}
+{"id": "socket-hot", "question": "Умная розетка греется и щёлкает, что делать?", "source": "arch_tech_knowledge_base.txt", "expect": [["отключ", "unplug", "disconnect"]]}
+{"id": "telegram-support", "question": "Is there Telegram support?", "source": "arch_tech_knowledge_base.txt", "expect": [["@archtech_support_bot"]]}
+{"id": "support-email", "question": "What is the support email address?", "source": "arch_tech_knowledge_base.txt", "expect": [["support@arch-tech.example"]]}
+{"id": "no-subscriptions", "question": "Вы продаёте цифровые подписки?", "source": "arch_tech_knowledge_base.txt", "expect": [["физическ", "physical", "не прода", "не является", "не основн", "do not sell", "don't sell"]]}
+{"id": "oos-price", "question": "Сколько стоит набор Arch Wi-Fi Max?", "unanswerable": true}
+{"id": "oos-installments", "question": "Можно ли купить мини-ПК в рассрочку?", "unanswerable": true}
+{"id": "oos-showroom-address", "question": "What is the exact street address of the Moscow showroom?", "unanswerable": true}
+{"id": "oos-ceo", "question": "Who is the CEO of Arch Tech?", "unanswerable": true}
+{"id": "oos-student-discount", "question": "Есть ли скидка для студентов?", "unanswerable": true}
+{"id": "oos-iphone", "question": "Do you sell the iPhone 17 Pro?", "unanswerable": true}
+{"id": "oos-weather", "question": "Какая завтра погода в Казани?", "unanswerable": true}
+{"id": "oos-trade-in", "question": "Do you accept old routers as trade-in?", "unanswerable": true}

@@ -1,0 +1,84 @@
+Acme Corp — Employee HR Handbook (Abridged)
+=============================================
+
+1. WORKING HOURS
+----------------
+Standard working hours are Monday through Friday, 9:00 AM to 6:00 PM local time.
+Core hours (mandatory presence) are 10:00 AM to 4:00 PM.
+Flexible start: employees may begin between 8:00 AM and 10:00 AM.
+Lunch break: 1 hour, typically 12:00 PM to 1:00 PM, but flexible.
+Total work week: 40 hours.
+Overtime requires prior written approval from the direct manager.
+Overtime is compensated at 1.5x the hourly rate for weekdays and 2x for weekends.
+
+2. REMOTE WORK POLICY
+----------------------
+All employees are eligible for hybrid work after completing the 90-day probation period.
+Remote work schedule: up to 3 days per week from home.
+Fully remote positions are available for engineering and customer support roles.
+Employees must be reachable on Slack during core hours (10 AM – 4 PM).
+Home office stipend: $500 one-time for new hires, $200/year for equipment refresh.
+VPN is mandatory when accessing internal systems remotely.
+International remote work requires HR approval at least 30 days in advance.
+
+3. PAID TIME OFF (PTO)
+-----------------------
+Annual PTO: 20 days for all full-time employees.
+PTO accrues at 1.67 days per month.
+Unused PTO carries over up to a maximum of 5 days into the next calendar year.
+PTO requests must be submitted at least 2 weeks in advance for periods longer than 3 days.
+Same-day PTO requests are allowed for emergencies with manager approval.
+Public holidays: 11 company-observed holidays per year (see HR calendar).
+
+4. SICK LEAVE
+-------------
+Sick leave: 10 days per year, separate from PTO.
+Doctor's note required for absences longer than 3 consecutive days.
+Unused sick days do NOT carry over to the next year.
+Mental health days count as sick leave — no doctor's note required for single days.
+
+5. PARENTAL LEAVE
+-----------------
+Primary caregiver: 16 weeks paid at 100% salary.
+Secondary caregiver: 6 weeks paid at 100% salary.
+Adoption and surrogacy are covered under the same policy.
+Parental leave can be taken within 12 months of the child's birth or adoption date.
+Gradual return: employees may work 50% schedule for 4 weeks after returning.
+
+6. PERFORMANCE REVIEWS
+----------------------
+Performance reviews are conducted twice a year: January and July.
+Self-assessment is due 2 weeks before the review meeting.
+Manager assessment includes 360-degree feedback from at least 3 peers.
+Rating scale: 1 (Needs Improvement) to 5 (Exceptional).
+Employees rated 4 or above are eligible for the annual bonus pool.
+Performance Improvement Plans (PIP) are issued for ratings below 2 for two consecutive cycles.
+
+7. COMPENSATION AND BENEFITS
+-----------------------------
+Salary reviews: annually in March, effective April 1st.
+Annual bonus: up to 15% of base salary, based on individual and company performance.
+Stock options: available for employees at Senior level and above, vesting over 4 years with a 1-year cliff.
+Health insurance: 100% premium covered for employees, 75% for dependents.
+Dental and vision: included in the health plan at no additional cost.
+401(k): company matches 100% up to 4% of salary.
+Education budget: $2,000/year for courses, conferences, and certifications.
+Gym membership: $50/month reimbursement.
+
+8. CODE OF CONDUCT
+------------------
+All employees must complete annual compliance training by December 31st.
+Zero tolerance for harassment, discrimination, and retaliation.
+Conflicts of interest must be disclosed to HR within 30 days.
+Gifts from vendors or clients exceeding $100 must be reported to the Ethics Committee.
+Social media: do not share confidential company information publicly.
+Violation of the code of conduct may result in disciplinary action up to and including termination.
+
+9. RESIGNATION AND OFFBOARDING
+-------------------------------
+Notice period: 2 weeks for individual contributors, 4 weeks for managers.
+Exit interview is conducted by HR on the last working day.
+Company equipment (laptop, monitors, badges) must be returned within 5 business days.
+Final paycheck includes unused PTO balance, paid out at the current daily rate.
+Non-compete clause: 6 months post-employment for senior and executive roles.
+Access to company systems is revoked at 5:00 PM on the last working day.

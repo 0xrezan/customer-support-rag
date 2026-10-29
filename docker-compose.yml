@@ -1,0 +1,106 @@
+services:
+  # ── Application API ────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "scripts/run_api.py"]
+    ports:
+      - "127.0.0.1:${API_HOST_PORT:-8000}:8000"
+    env_file: .env
+    environment:
+      API_HOST: 0.0.0.0
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chroma:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/v1/health/live')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # ── Dramatiq Worker ────────────────────────────────────────
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "-m", "dramatiq", "app.infrastructure.queue.tasks"]
+    env_file: .env
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chroma:
+        condition: service_started
+
+  # ── Telegram Bot ───────────────────────────────────────────
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["python", "scripts/run_bot.py"]
+    env_file: .env
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      chroma:
+        condition: service_started
+
+  # ── PostgreSQL ─────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    ports:
+      - "127.0.0.1:${POSTGRES_HOST_PORT:-5432}:5432"
+    environment:
+      POSTGRES_USER: bot
+      POSTGRES_PASSWORD: bot_secret
+      POSTGRES_DB: support_bot
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bot -d support_bot"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ── Redis ──────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "127.0.0.1:${REDIS_HOST_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ── ChromaDB ───────────────────────────────────────────────
+  chroma:
+    image: chromadb/chroma:0.6.3
+    ports:
+      - "127.0.0.1:${CHROMA_HOST_PORT:-8100}:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    restart: unless-stopped
+    environment:
+      IS_PERSISTENT: "TRUE"
+      ANONYMIZED_TELEMETRY: "FALSE"
+
+volumes:
+  pg_data:
+  redis_data:
+  chroma_data:

@@ -1,0 +1,87 @@
+Acme Corp — Customer Support Knowledge Base
+============================================
+
+1. RETURN POLICY
+----------------
+Customers may return any product within 30 calendar days of the delivery date.
+The product must be in its original packaging, unused, and with all tags attached.
+Refunds are processed within 5-7 business days after we receive the returned item.
+Shipping costs for returns are covered by Acme Corp for defective products only.
+For non-defective returns, the customer is responsible for return shipping costs.
+A restocking fee of 15% applies to electronics returned after 14 days.
+
+To initiate a return:
+1. Log in to your Acme Corp account at acme-corp.com/returns
+2. Select the order and item you wish to return
+3. Print the prepaid shipping label (if eligible)
+4. Ship the item within 7 days of initiating the return
+
+2. SHIPPING INFORMATION
+-----------------------
+Standard shipping: 5-7 business days, free on orders over $50.
+Express shipping: 2-3 business days, $9.99 flat rate.
+Overnight shipping: next business day, $19.99 flat rate.
+International shipping: 10-15 business days, rates vary by destination.
+
+All orders are shipped from our warehouse in Austin, Texas.
+Tracking numbers are sent via email within 24 hours of shipment.
+Orders placed before 2:00 PM EST on business days ship the same day.
+
+3. WARRANTY
+-----------
+All Acme Corp products come with a 2-year limited warranty.
+The warranty covers manufacturing defects and hardware failures.
+The warranty does NOT cover:
+- Damage from drops, water, or misuse
+- Normal wear and tear
+- Unauthorized modifications or repairs
+- Cosmetic damage (scratches, dents)
+
+To file a warranty claim:
+1. Contact support@acme-corp.com with your order number
+2. Describe the issue and attach photos
+3. Our team will respond within 48 hours with next steps
+
+4. SUBSCRIPTION PLANS
+---------------------
+Acme Basic: $9.99/month — 5 GB storage, email support, 1 user.
+Acme Pro: $24.99/month — 50 GB storage, priority support, 5 users.
+Acme Enterprise: $99.99/month — unlimited storage, dedicated account manager, unlimited users.
+
+All plans include a 14-day free trial. No credit card required for trial.
+Annual billing saves 20% compared to monthly billing.
+Plans can be upgraded or downgraded at any time from your account settings.
+Cancellations take effect at the end of the current billing cycle.
+
+5. CONTACT INFORMATION
+----------------------
+Email: support@acme-corp.com
+Phone: 1-800-ACME-HELP (1-800-226-3435)
+Live chat: Available Monday-Friday, 9 AM - 6 PM EST at acme-corp.com/chat
+Headquarters: 1200 Innovation Drive, Austin, TX 78701
+
+Average response times:
+- Email: within 24 hours
+- Phone: under 5 minutes wait time
+- Live chat: under 2 minutes wait time
+
+6. PAYMENT METHODS
+------------------
+We accept the following payment methods:
+- Visa, Mastercard, American Express, Discover
+- PayPal
+- Apple Pay and Google Pay
+- Acme Corp Gift Cards
+- Bank wire transfer (for orders over $1,000)
+
+All transactions are encrypted with 256-bit SSL.
+Invoices are available for download from your account dashboard.
+
+7. LOYALTY PROGRAM
+------------------
+Acme Rewards members earn 1 point per $1 spent.
+Points can be redeemed at a rate of 100 points = $5 discount.
+Silver tier (500+ points): free express shipping on all orders.
+Gold tier (2000+ points): 10% discount on all purchases + free overnight shipping.
+Points expire 12 months after the date they were earned.
+Sign up for free at acme-corp.com/rewards.

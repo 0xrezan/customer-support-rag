@@ -1,0 +1,30 @@
+{
+  "askResponse": {
+    "ok": true,
+    "data": {
+      "status": "success",
+      "answer": "Based on the documentation, the return policy allows returns within 30 days of purchase.",
+      "citations": [
+        {
+          "document_name": "returns-policy.pdf",
+          "page": 1,
+          "chunk_id": "chunk-001"
+        }
+      ],
+      "llm_provider": "openai",
+      "llm_model": "gpt-5.4-mini",
+      "latency_ms": 245
+    },
+    "error": null
+  },
+  "feedbackResponse": {
+    "ok": true,
+    "data": {
+      "id": "fb-001",
+      "answer_id": "ans-001",
+      "rating": "thumbs_up",
+      "message": "Feedback recorded"
+    },
+    "error": null
+  }
+}

@@ -1,0 +1,96 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "customer-support-bot"
+version = "0.1.0"
+description = "Customer-support RAG bot with Telegram and web/API entrypoints"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "REZA", email = "244307759+0xrezan@users.noreply.github.com" }]
+dependencies = [
+    # Web framework
+    "fastapi>=0.115,<1",
+    "uvicorn[standard]>=0.32,<1",
+    # Telegram bot
+    "aiogram>=3.15,<4",
+    # Config & validation
+    "pydantic>=2.10,<3",
+    "pydantic-settings>=2.7,<3",
+    # Database
+    "sqlalchemy[asyncio]>=2.0,<3",
+    "asyncpg>=0.30,<1",
+    "alembic>=1.14,<2",
+    # Vector store
+    "chromadb>=0.6,<1",
+    # Task queue
+    "dramatiq[redis]>=1.17,<2",
+    # Cache / broker
+    "redis>=5.2,<6",
+    # PDF parsing
+    "pypdf>=6.13.3,<7",
+    # Embeddings & LLM
+    "openai>=2.8,<3",
+    "anthropic>=0.42,<2",
+    # Templating
+    "jinja2>=3.1,<4",
+    # Logging
+    "structlog>=24.4,<25",
+    # HTTP client
+    "httpx>=0.28,<1",
+    # Utilities
+    "python-multipart>=0.0.18,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.3,<10",
+    "pytest-asyncio>=1,<2",
+    "pytest-cov>=6.0,<7",
+    "httpx>=0.28,<1",
+    "ruff>=0.8,<1",
+    "bandit>=1.8,<2",
+    "pip-audit>=2.7,<3",
+    "factory-boy>=3.3,<4",
+    "aiosqlite>=0.20,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 99
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "SIM",  # flake8-simplify
+    "TCH",  # flake8-type-checking
+    "RUF",  # ruff-specific
+]
+ignore = ["A003", "B008"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+filterwarnings = ["ignore::DeprecationWarning"]
+markers = [
+    "integration: marks tests requiring live services (Docker)",
+    "e2e: marks end-to-end tests requiring full stack",
+]
+
+[tool.ruff.format]
+quote-style = "double"
