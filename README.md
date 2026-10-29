@@ -1,7 +1,7 @@
 # Customer Support RAG
 
 [![CI](https://github.com/0xrezan/customer-support-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/0xrezan/customer-support-rag/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/python-3.11+-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/python-3.11-3776AB?logo=python&logoColor=white)
 ![React](https://img.shields.io/badge/react-19-61DAFB?logo=react&logoColor=black)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
@@ -164,9 +164,8 @@ frontend/
 ### Prerequisites
 
 - Docker and Docker Compose
-- uv
+- uv (picks Python 3.11 from `.python-version`; ChromaDB 0.6 has no wheels for 3.13+)
 - Node.js 18+ and npm
-- Python 3.11+
 
 ### 1. Clone and configure
 
@@ -174,7 +173,7 @@ frontend/
 git clone https://github.com/0xrezan/customer-support-rag.git
 cd customer-support-rag
 cp .env.example .env
-# Add your OpenAI key. Telegram is optional.
+# Set OPENAI_API_KEY and ADMIN_API_TOKEN (any random 32+ characters). Telegram is optional.
 ```
 
 ### 2. Install backend dependencies
@@ -189,10 +188,11 @@ uv sync --extra dev
 docker compose up -d postgres redis chroma
 ```
 
-If local ports are already taken, override the host-side bindings:
+If local ports are already taken, change them in `.env`: the `*_HOST_PORT` value is what Docker publishes, and the app connects through `DATABASE_URL`, `REDIS_URL`, `DRAMATIQ_BROKER_URL`, and `CHROMA_PORT`, so update the matching port there too. For example, with Postgres on 15432:
 
-```bash
-POSTGRES_HOST_PORT=15432 REDIS_HOST_PORT=16379 CHROMA_HOST_PORT=18100 docker compose up -d postgres redis chroma
+```env
+POSTGRES_HOST_PORT=15432
+DATABASE_URL=postgresql+asyncpg://bot:bot_secret@localhost:15432/support_bot
 ```
 
 ### 4. Run database migrations
@@ -213,7 +213,7 @@ cd frontend && npm install && cd ..
 uv run python run.py
 ```
 
-This starts the API (port 8000), Dramatiq worker, and frontend dev server (port 5173) in one command. The Telegram bot is started only when `TELEGRAM_BOT_TOKEN` is configured.
+This starts the API (port 8000), Dramatiq worker, and frontend dev server (port 5173) in one command. If you change `API_PORT`, point the frontend at it with `VITE_API_BASE_URL` in `frontend/.env` (see `frontend/.env.example`). The Telegram bot is started only when `TELEGRAM_BOT_TOKEN` is configured.
 
 ### 7. Open in browser
 
@@ -225,6 +225,19 @@ This starts the API (port 8000), Dramatiq worker, and frontend dev server (port 
 | Health check | http://localhost:8000/api/v1/health/live |
 
 Admin token is set in `.env` as `ADMIN_API_TOKEN`.
+
+### 8. Load the sample knowledge base
+
+The knowledge base starts empty, so every question is declined until you add documents. Upload the files from `test_docs/` on the admin page, or with curl:
+
+```bash
+TOKEN=your-admin-token   # the ADMIN_API_TOKEN value from .env
+for f in test_docs/*.txt; do
+  curl -F "file=@$f" -H "Authorization: Bearer $TOKEN" http://localhost:8000/api/v1/admin/documents/upload
+done
+```
+
+Indexing takes a few seconds. Then ask in the chat: "How many vacation days do employees get?"
 
 ---
 

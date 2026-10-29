@@ -6,6 +6,13 @@ import { sanitizeText } from "@/shared/lib/sanitizeText";
 import { Button } from "@/shared/ui/button";
 import { RotateCw } from "lucide-react";
 
+// The model marks key facts with **bold**; render them instead of showing raw asterisks.
+function renderAnswer(text: string) {
+  return text
+    .split(/\*\*(.+?)\*\*/g)
+    .map((part, index) => (index % 2 === 1 ? <strong key={index}>{part}</strong> : part));
+}
+
 interface BotAnswerCardProps {
   message: ChatMessage;
   onFeedback: (messageId: string, rating: FeedbackRating, comment?: string) => void;
@@ -28,7 +35,7 @@ export function BotAnswerCard({
   return (
     <article className="rounded-2xl border bg-card p-4">
       <p className="whitespace-pre-wrap break-words text-sm">
-        {sanitizeText(message.content)}
+        {renderAnswer(sanitizeText(message.content))}
       </p>
       {message.citations && message.citations.length > 0 && (
         <CitationList citations={message.citations} />

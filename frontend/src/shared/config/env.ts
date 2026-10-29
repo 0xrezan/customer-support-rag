@@ -1,11 +1,6 @@
-function getEnvVar(key: string): string {
-  const value = import.meta.env[key] as string | undefined;
-  if (!value) {
-    throw new Error(`Missing required environment variable: ${key}`);
-  }
-  return value;
-}
+// Matches the API's default port, so the app works without a frontend/.env.
+const DEFAULT_API_BASE_URL = "http://localhost:8000";
 
 export const env = {
-  apiBaseUrl: getEnvVar("VITE_API_BASE_URL"),
+  apiBaseUrl: (import.meta.env.VITE_API_BASE_URL as string | undefined) || DEFAULT_API_BASE_URL,
 } as const;

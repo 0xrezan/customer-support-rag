@@ -8,7 +8,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Layer caching: install deps before copying source
-COPY pyproject.toml ./
+COPY pyproject.toml README.md ./
 RUN pip install --no-cache-dir .
 
 # Copy application source
